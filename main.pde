@@ -64,8 +64,7 @@ void spawnNewBlock(float w) {
 	float dir = random(1) < 0.5 ? -1 : 1;
 	// 화면을 좌우 왕복하도록 시작 X는 랜덤, 방향도 랜덤
 	float x = random(w/2, width - w/2);
-	current = new Block(new PVector(x, y), w, blockHeight, moveSpeed * dir);
-	current.col = randomLayerColor();
+	current = new Block(new PVector(x, y), w, blockHeight, moveSpeed * dir, randomLayerColor());
 }
 
 void draw() {

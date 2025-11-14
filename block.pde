@@ -1,11 +1,10 @@
 class Block extends Object {
 	float speedX;
-	int col;      // 현재 이동 블록 색
 
-	Block(PVector pos, float w, float h, float speedX) {
+	Block(PVector pos, float w, float h, float speedX, int col) {
 		super(pos, w, h);
 		this.speedX = speedX;
-		this.col = color(90, 200, 255);
+		this.col = col;
 	}
 
 	void updateHorizontalBounce(float leftBound, float rightBound) {
